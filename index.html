@@ -1,0 +1,23 @@
+<!doctype html>
+<html>
+  <head>
+    <title>Phone Gap Test</title>
+  </head>
+  <body>
+    <p>
+      <button id="silly">Do it</button>
+      <button id="clear">Clear</button>
+    </p>
+    <ul id="results"></ul>
+    <script src="zepto.min.js"></script>
+    <script src="silly.js"></script>
+    <script>
+      $('#silly').on('click', function() {
+        window.SILLY.DoIt($('#results'));
+      });
+      $('#clear').on('click', function() {
+        $('#results').html('');
+      });
+    </script>
+  </body>
+</html>
